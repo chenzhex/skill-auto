@@ -1,0 +1,27 @@
+schema_version: 1
+batch_id: skillhub-fifty-demo-chunk-04
+skills:
+  -
+    name: beatra
+    link: 'https://skillhub.cn/skills/beatra-ai/beatra'
+  -
+    name: aihot
+    link: 'https://skillhub.cn/skills/clawhub_kkkkhazix/aihot'
+    smoke_risk:
+      - execution_degraded
+      - script_failed
+  -
+    name: agently-mail
+    link: 'https://skillhub.cn/skills/tencent-adm/agently-mail'
+    smoke_risk:
+      - execution_degraded
+      - script_failed
+  -
+    name: pdf-image-text-extractor
+    link: 'https://skillhub.cn/skills/user_5f9c21aa/pdf-image-text-extractor'
+  -
+    name: sonoscli
+    link: 'https://skillhub.cn/skills/clawhub_steipete/sonoscli'
+    smoke_risk:
+      - execution_degraded
+      - path_access_failed

@@ -1,0 +1,25 @@
+schema_version: 1
+batch_id: skillhub-fifty-demo-chunk-02
+skills:
+  -
+    name: humanizer
+    link: 'https://skillhub.cn/skills/clawhub_biostartechnology/humanizer'
+  -
+    name: weather
+    link: 'https://skillhub.cn/skills/clawhub_steipete/weather'
+  -
+    name: proactive-agent
+    link: 'https://skillhub.cn/skills/clawhub_halthelobster/proactive-agent'
+  -
+    name: smart-charts
+    link: 'https://skillhub.cn/skills/user_5b28ea14/smart-charts'
+    smoke_risk:
+      - execution_degraded
+      - script_failed
+  -
+    name: unclecheng-reduce-ai-perception-v2
+    link: 'https://skillhub.cn/skills/user_ab5ae6ee/unclecheng-reduce-ai-perception-v2'
+    runtime_skill_name: humanizer
+    smoke_risk:
+      - execution_degraded
+      - script_failed

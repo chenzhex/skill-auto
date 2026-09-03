@@ -1,0 +1,24 @@
+schema_version: 1
+batch_id: skillhub-seven
+
+skills:
+  - name: self-improving-agent
+    link: https://skillhub.cn/skills/clawhub_pskoett/self-improving-agent
+
+  - name: find-skills
+    link: https://skillhub.cn/skills/clawhub_root/find-skills
+
+  - name: agent-browser
+    link: https://skillhub.cn/skills/clawhub_rez0/agent-browser
+
+  - name: dev-expert
+    link: https://skillhub.cn/skills/user_741dc82b/dev-expert
+
+  - name: self-improving
+    link: https://skillhub.cn/skills/clawhub_ivangdavila/self-improving
+
+  - name: weather
+    link: https://skillhub.cn/skills/clawhub_steipete/weather
+
+  - name: multi-search-engine
+    link: https://skillhub.cn/skills/zcwl/multi-search-engine

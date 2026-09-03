@@ -1,0 +1,20 @@
+schema_version: 1
+batch_id: skillhub-fifty-demo-chunk-01
+skills:
+  -
+    name: self-improving-agent
+    link: 'https://skillhub.cn/skills/clawhub_pskoett/self-improving-agent'
+    runtime_skill_name: self-improvement
+  -
+    name: dev-expert
+    link: 'https://skillhub.cn/skills/user_741dc82b/dev-expert'
+  -
+    name: self-improving
+    link: 'https://skillhub.cn/skills/clawhub_ivangdavila/self-improving'
+    runtime_skill_name: Self-Improving + Proactive Agent
+  -
+    name: skill-vetter
+    link: 'https://skillhub.cn/skills/clawhub_spclaudehome/skill-vetter'
+  -
+    name: ontology
+    link: 'https://skillhub.cn/skills/clawhub_oswalpalash/ontology'

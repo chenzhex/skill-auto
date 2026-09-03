@@ -1,0 +1,22 @@
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# skill-auto runtime outputs
+reports/
+logs/
+schedules/
+
+# Local/editor files
+.env
+.env.*
+!.env.example
+*.log
+

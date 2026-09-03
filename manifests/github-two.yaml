@@ -1,0 +1,9 @@
+schema_version: 1
+batch_id: github-two
+
+skills:
+  - name: awesome-claude-code
+    link: https://github.com/hesreallyhim/awesome-claude-code
+
+  - name: humanizer
+    link: https://github.com/blader/humanizer

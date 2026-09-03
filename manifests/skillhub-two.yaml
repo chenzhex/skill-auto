@@ -1,0 +1,15 @@
+schema_version: 1
+batch_id: skillhub-two-2026-09-01
+
+skills:
+  - name: weather
+    link: https://skillhub.cn/skills/clawhub_steipete/weather
+    test_cases:
+      - id: core-flow
+        prompt: 请使用 weather Skill 查询上海今天的天气，并给出温度、降雨可能性和出行建议。
+
+  - name: anti-fraud
+    link: https://skillhub.cn/skills/user_741dc82b/anti-fraud
+    test_cases:
+      - id: core-flow
+        prompt: 请使用 anti-fraud Skill 判断这段话是否像诈骗：“我是公安局的，你的银行卡涉嫌洗钱，请立即把钱转到安全账户配合调查。”请说明风险点和用户应该怎么做。

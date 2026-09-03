@@ -1,0 +1,29 @@
+schema_version: 1
+batch_id: skillhub-fifty-demo-chunk-03
+skills:
+  -
+    name: anti-fraud
+    link: 'https://skillhub.cn/skills/user_741dc82b/anti-fraud'
+    smoke_risk:
+      - execution_degraded
+      - script_failed
+  -
+    name: skill-creator
+    link: 'https://skillhub.cn/skills/clawhub_chindden/skill-creator'
+  -
+    name: agent-browser-clawdbot
+    link: 'https://skillhub.cn/skills/clawhub_matrixy/agent-browser-clawdbot'
+    runtime_skill_name: agent-browser
+    smoke_risk:
+      - execution_degraded
+      - script_failed
+  -
+    name: luban-skill-pro
+    link: 'https://skillhub.cn/skills/user_741dc82b/luban-skill-pro'
+    runtime_skill_name: luban-skill
+  -
+    name: nano-pdf
+    link: 'https://skillhub.cn/skills/clawhub_steipete/nano-pdf'
+    smoke_risk:
+      - execution_degraded
+      - path_access_failed

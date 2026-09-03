@@ -1,0 +1,54 @@
+schema_version: 1
+batch_id: onboard-wave-001
+skills:
+  -
+    name: report-skill
+    link: 'https://github.com/example/report-skill'
+    onboard_as:
+      builtin: true
+      featured: true
+    provider: GitHub
+    version: 1.0.0
+    category: work
+    builtin:
+      uid: bsk_B70D392ACC8F6BCB
+      path: work/report-skill
+      category: work
+      provider: GitHub
+      version: 1.0.0
+      market_visible: true
+    featured:
+      id: report-skill
+      type: work
+      status: published
+      default_locale: zh-CN
+      category: 通用工作
+      tags:
+        - 通用工作
+      home: false
+      gallery: true
+      title: report-skill
+      description: report-skill Skill 示例能力
+      output_type: report
+      output_label: 结果
+      demo_prompts:
+        -
+          id: core-demo
+          title: report-skill 核心示例
+          prompt: 请使用 report-skill Skill 完成一个适合展示的核心示例任务，并输出结构化结果。
+  -
+    name: paper-search
+    link: 'https://github.com/example/paper-search'
+    onboard_as:
+      builtin: true
+      featured: false
+    category: search
+    provider: GitHub
+    version: 1.0.0
+    builtin:
+      uid: bsk_EC7A5CE286293E48
+      path: search/paper-search
+      category: search
+      provider: GitHub
+      version: 1.0.0
+      market_visible: true

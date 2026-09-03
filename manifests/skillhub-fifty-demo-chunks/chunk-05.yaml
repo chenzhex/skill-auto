@@ -1,0 +1,28 @@
+schema_version: 1
+batch_id: skillhub-fifty-demo-chunk-05
+skills:
+  -
+    name: automation-workflows
+    link: 'https://skillhub.cn/skills/clawhub_jk-0001/automation-workflows'
+  -
+    name: ppt-generator-skill
+    link: 'https://skillhub.cn/skills/user_3b34947d/ppt-generator-skill'
+    runtime_skill_name: ppt-generator
+    smoke_risk:
+      - execution_degraded
+      - script_failed
+  -
+    name: data-analysis
+    link: 'https://skillhub.cn/skills/clawhub_ivangdavila/data-analysis'
+    runtime_skill_name: Data Analysis
+  -
+    name: chinese-official-writing
+    link: 'https://skillhub.cn/skills/user_f3d82da7/chinese-official-writing'
+    smoke_risk:
+      - missing_api_key
+  -
+    name: akshare-stock
+    link: 'https://skillhub.cn/skills/clawhub_mbpz/akshare-stock'
+    smoke_risk:
+      - execution_degraded
+      - script_failed

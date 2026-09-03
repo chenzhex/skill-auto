@@ -1,0 +1,33 @@
+schema_version: 1
+batch_id: onboard-weather
+skills:
+  -
+    name: weather
+    link: 'https://skillhub.cn/skills/clawhub_steipete/weather'
+    onboard_as:
+      builtin: true
+      featured: false
+    category: work
+    provider: LazyMind
+    title: 天气查询
+    description: 查询城市天气并给出出行、穿衣和活动建议。
+    featured_category: 生活助手
+    tags:
+      - 天气
+      - 出行建议
+      - 生活助手
+    output_type: report
+    output_label: 天气建议
+    demo_prompts:
+      -
+        id: core-demo
+        title: 北京周末出行天气建议
+        prompt: 请使用 weather Skill 查询北京未来两天的天气，并给出穿衣、通勤和户外活动建议。
+    version: 1.0.0
+    builtin:
+      uid: bsk_A979D6239D5D1B03
+      path: work/weather
+      category: work
+      provider: LazyMind
+      version: 1.0.0
+      market_visible: true

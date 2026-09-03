@@ -1,0 +1,9 @@
+schema_version: 1
+batch_id: skillhub-local-dependency-retest
+
+skills:
+  - name: agent-browser
+    link: https://skillhub.cn/skills/clawhub_rez0/agent-browser
+
+  - name: dev-expert
+    link: https://skillhub.cn/skills/user_741dc82b/dev-expert

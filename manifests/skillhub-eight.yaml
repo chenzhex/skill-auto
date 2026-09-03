@@ -1,0 +1,27 @@
+schema_version: 1
+batch_id: skillhub-eight
+
+skills:
+  - name: self-improvement
+    link: https://skillhub.cn/skills/clawhub_pskoett/self-improving-agent
+
+  - name: find-skills
+    link: https://skillhub.cn/skills/clawhub_root/find-skills
+
+  - name: agent-browser
+    link: https://skillhub.cn/skills/clawhub_rez0/agent-browser
+
+  - name: tencent-docs
+    link: https://skillhub.cn/skills/tencent-adm/tencent-docs
+
+  - name: summarize
+    link: https://skillhub.cn/skills/clawhub_paudyyin/summarize
+
+  - name: weather
+    link: https://skillhub.cn/skills/clawhub_steipete/weather
+
+  - name: anti-fraud
+    link: https://skillhub.cn/skills/user_741dc82b/anti-fraud
+
+  - name: unclecheng-reduce-ai-perception-v2
+    link: https://skillhub.cn/skills/user_ab5ae6ee/unclecheng-reduce-ai-perception-v2

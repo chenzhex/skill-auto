@@ -1,0 +1,6 @@
+schema_version: 1
+batch_id: github-meeting-notes
+
+skills:
+  - name: meeting-notes
+    link: https://github.com/nlink-jp/meeting-notes/tree/main/meeting-notes

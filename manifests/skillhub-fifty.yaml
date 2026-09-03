@@ -1,0 +1,104 @@
+schema_version: 1
+batch_id: skillhub-fifty
+
+skills:
+  - name: self-improving-agent
+    link: https://skillhub.cn/skills/clawhub_pskoett/self-improving-agent
+  - name: find-skills
+    link: https://skillhub.cn/skills/clawhub_root/find-skills
+  - name: agent-browser
+    link: https://skillhub.cn/skills/clawhub_rez0/agent-browser
+  - name: dev-expert
+    link: https://skillhub.cn/skills/user_741dc82b/dev-expert
+  - name: self-improving
+    link: https://skillhub.cn/skills/clawhub_ivangdavila/self-improving
+  - name: skill-vetter
+    link: https://skillhub.cn/skills/clawhub_spclaudehome/skill-vetter
+  - name: ontology
+    link: https://skillhub.cn/skills/clawhub_oswalpalash/ontology
+  - name: humanizer
+    link: https://skillhub.cn/skills/clawhub_biostartechnology/humanizer
+  - name: weather
+    link: https://skillhub.cn/skills/clawhub_steipete/weather
+  - name: multi-search-engine
+    link: https://skillhub.cn/skills/zcwl/multi-search-engine
+  - name: proactive-agent
+    link: https://skillhub.cn/skills/clawhub_halthelobster/proactive-agent
+  - name: smart-charts
+    link: https://skillhub.cn/skills/user_5b28ea14/smart-charts
+  - name: web-tools-guide
+    link: https://skillhub.cn/skills/user_ec205dbb/web-tools-guide
+  - name: word-docx
+    link: https://skillhub.cn/skills/clawhub_ivangdavila/word-docx
+  - name: unclecheng-reduce-ai-perception-v2
+    link: https://skillhub.cn/skills/user_ab5ae6ee/unclecheng-reduce-ai-perception-v2
+  - name: anti-fraud
+    link: https://skillhub.cn/skills/user_741dc82b/anti-fraud
+  - name: excel-xlsx
+    link: https://skillhub.cn/skills/clawhub_ivangdavila/excel-xlsx
+  - name: obsidian
+    link: https://skillhub.cn/skills/clawhub_steipete/obsidian
+  - name: skill-creator
+    link: https://skillhub.cn/skills/clawhub_chindden/skill-creator
+  - name: contextweave-interactive-architecture
+    link: https://skillhub.cn/skills/user_bddf3fe6/contextweave-interactive-architecture
+  - name: agent-browser-clawdbot
+    link: https://skillhub.cn/skills/clawhub_matrixy/agent-browser-clawdbot
+  - name: luban-skill-pro
+    link: https://skillhub.cn/skills/user_741dc82b/luban-skill-pro
+  - name: nano-pdf
+    link: https://skillhub.cn/skills/clawhub_steipete/nano-pdf
+  - name: beatra
+    link: https://skillhub.cn/skills/beatra-ai/beatra
+  - name: agent-memory
+    link: https://skillhub.cn/skills/clawhub_dennis-da-menace/agent-memory
+  - name: auto-updater
+    link: https://skillhub.cn/skills/clawhub_maximeprades/auto-updater
+  - name: openai-whisper
+    link: https://skillhub.cn/skills/clawhub_steipete/openai-whisper
+  - name: aihot
+    link: https://skillhub.cn/skills/clawhub_kkkkhazix/aihot
+  - name: agently-mail
+    link: https://skillhub.cn/skills/tencent-adm/agently-mail
+  - name: pdf-image-text-extractor
+    link: https://skillhub.cn/skills/user_5f9c21aa/pdf-image-text-extractor
+  - name: agent-browser-zcwl
+    link: https://skillhub.cn/skills/zcwl/agent-browser
+  - name: sonoscli
+    link: https://skillhub.cn/skills/clawhub_steipete/sonoscli
+  - name: automation-workflows
+    link: https://skillhub.cn/skills/clawhub_jk-0001/automation-workflows
+  - name: browser-use
+    link: https://skillhub.cn/skills/clawhub_shawnpana/browser-use
+  - name: lingyi-wx-viral-script-generator
+    link: https://skillhub.cn/skills/org-28ib33ph/lingyi-wx-viral-script-generator
+  - name: diagram-generator
+    link: https://skillhub.cn/skills/clawhub_matthewyin/diagram-generator
+  - name: cnfinancialscraper
+    link: https://skillhub.cn/skills/user_9d5a2a39/cnfinancialscraper
+  - name: ppt-generator-skill
+    link: https://skillhub.cn/skills/user_3b34947d/ppt-generator-skill
+  - name: data-analysis
+    link: https://skillhub.cn/skills/clawhub_ivangdavila/data-analysis
+  - name: chinese-official-writing
+    link: https://skillhub.cn/skills/user_f3d82da7/chinese-official-writing
+  - name: akshare-stock
+    link: https://skillhub.cn/skills/clawhub_mbpz/akshare-stock
+  - name: lingyi-wx-video-decomposer-exp
+    link: https://skillhub.cn/skills/org-28ib33ph/lingyi-wx-video-decomposer-exp
+  - name: feishu-evolver-wrapper
+    link: https://skillhub.cn/skills/clawhub_autogame-17/feishu-evolver-wrapper
+  - name: mcporter
+    link: https://skillhub.cn/skills/clawhub_steipete/mcporter
+  - name: powerpoint-pptx
+    link: https://skillhub.cn/skills/clawhub_ivangdavila/powerpoint-pptx
+  - name: qilinbashe
+    link: https://skillhub.cn/skills/user_cd0fcd93/qilinbashe
+  - name: find-skills-skill
+    link: https://skillhub.cn/skills/clawhub_fangkelvin/find-skills-skill
+  - name: ui-ux-pro-max
+    link: https://skillhub.cn/skills/clawhub_xobi667/ui-ux-pro-max
+  - name: find-skill-skillhub
+    link: https://skillhub.cn/skills/user_290ac21c/find-skill-skillhub
+  - name: markdown-converter
+    link: https://skillhub.cn/skills/clawhub_steipete/markdown-converter

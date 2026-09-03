@@ -1,0 +1,17 @@
+schema_version: 1
+batch_id: onboard-wave-001
+
+skills:
+  - name: report-skill
+    link: https://github.com/example/report-skill
+    onboard_as:
+      builtin: true
+      featured: true
+
+  - name: paper-search
+    link: https://github.com/example/paper-search
+    onboard_as:
+      builtin: true
+      featured: false
+    category: search
+    provider: GitHub

@@ -1,0 +1,32 @@
+schema_version: 1
+batch_id: my-skill-batch
+
+skills:
+  - name: self-improving-agent
+    link: https://skillhub.cn/skills/clawhub_pskoett/self-improving-agent
+
+  - name: find-skills
+    link: https://skillhub.cn/skills/clawhub_root/find-skills
+    env:
+      GITHUB_TOKEN: your_github_token_here
+
+  - name: agent-browser
+    link: https://skillhub.cn/skills/clawhub_rez0/agent-browser
+
+  - name: tencent-docs
+    link: https://skillhub.cn/skills/tencent-adm/tencent-docs
+    env:
+      TENCENT_DOCS_TOKEN: your_tencent_docs_token_here
+      ACCESS_TOKEN: your_tencent_docs_token_here
+      MCP_TOKEN: your_tencent_docs_token_here
+
+  - name: summarize
+    link: https://skillhub.cn/skills/clawhub_paudyyin/summarize
+    env:
+      OPENAI_API_KEY: your_openai_api_key_here
+      OPENAI_BASE_URL: https://api.siliconflow.cn/v1
+      OPENAI_USE_CHAT_COMPLETIONS: "1"
+      SUMMARIZE_MODEL: openai/deepseek-ai/DeepSeek-V4-Flash
+
+  - name: dev-expert
+    link: https://skillhub.cn/skills/user_741dc82b/dev-expert

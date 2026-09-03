@@ -1,0 +1,9 @@
+schema_version: 1
+batch_id: skillhub-wechat-cover
+
+skills:
+  - name: wechat-cover
+    link: https://skillhub.cn/skills/user_8d36cde0/wechat-cover
+    env:
+      REDFOX_API_KEY: your_redfox_api_key_here
+    case: '请使用 wechat-cover Skill 分析最近公众号里“职场成长、升职加薪、打工人”赛道的爆款封面规律，并生成 3 套适合新媒体文章的封面设计方案。必须生成一个 HTML 报告文件作为最终交付：请严格使用 references/report_template.html 作为模板，把分析数据注入 __REPORT_DATA__，保存为 ./爆款封面分析报告_职场成长.html，并在最后返回这个 HTML 文件路径或附件链接。即使微信封面图片无法访问，也必须基于 scripts/fetch_explosive_covers.py 获取到的真实文章数据降级完成 HTML 报告，不要只在聊天里输出文字方案。'

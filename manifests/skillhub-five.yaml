@@ -1,0 +1,18 @@
+schema_version: 1
+batch_id: skillhub-five
+
+skills:
+  - name: self-improvement
+    link: https://skillhub.cn/skills/clawhub_pskoett/self-improving-agent
+
+  - name: find-skills
+    link: https://skillhub.cn/skills/clawhub_root/find-skills
+
+  - name: agent-browser
+    link: https://skillhub.cn/skills/clawhub_rez0/agent-browser
+
+  - name: tencent-docs
+    link: https://skillhub.cn/skills/tencent-adm/tencent-docs
+
+  - name: summarize
+    link: https://skillhub.cn/skills/clawhub_paudyyin/summarize
