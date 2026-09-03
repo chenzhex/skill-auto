@@ -11,10 +11,17 @@ Skill 接入采用“文档驱动”的方式：`skill-auto` 会产出候选清�
 ```mermaid
 flowchart LR
     A["YAML 清单<br/>name / link / env / case"] --> B["源码解析<br/>SkillHub · GitHub · ZIP"]
-    B --> T["三阶段<br/>测试流水线"]
-    T --> C["1. Install<br/>下载 + 静态预检"]
-    C --> D["2. Smoke<br/>低 token 对话"]
-    D --> E["3. Demo<br/>完整执行 + 语义评测"]
+
+    subgraph P[" "]
+        direction LR
+        T["三阶段<br/>测试流水线"]
+        C["1. Install<br/>下载 + 静态预检"]
+        D["2. Smoke<br/>低 token 对话"]
+        E["3. Demo<br/>完整执行 + 语义评测"]
+        T --> C --> D --> E
+    end
+
+    B --> T
     E --> F["测试报告<br/>summary · trials · bad cases"]
     F --> G["接入候选<br/>人工复核 + 接入指南"]
 
@@ -27,6 +34,7 @@ flowchart LR
     classDef stage fill:#ffedd5,stroke:#f97316,color:#7c2d12,stroke-width:2px;
     classDef output fill:#ecfdf5,stroke:#34d399,color:#064e3b;
     classDef support fill:#f8fafc,stroke:#94a3b8,color:#334155,stroke-dasharray: 4 3;
+    style P fill:#fefce8,stroke:#facc15,stroke-width:1px,color:transparent;
 
     class A,B input;
     class T label;
