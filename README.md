@@ -24,6 +24,9 @@ to the LazyMind repository after reviewing the test report.
 
 ## Quick Start
 
+For a simple end-to-end user guide, read
+[`docs/USER_GUIDE.md`](docs/USER_GUIDE.md).
+
 Run from the project root:
 
 ```bash
@@ -429,4 +432,3 @@ Current covered areas include:
 - demo case generation parsing, validation, batch repair, and fallback
 - semantic judgement normalization and application
 - onboarding manifest resolution and writers
-
