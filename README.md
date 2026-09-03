@@ -9,6 +9,29 @@ produce onboarding candidates, but production onboarding should follow
 [`docs/SKILL_ONBOARDING_GUIDE.md`](docs/SKILL_ONBOARDING_GUIDE.md) and be applied
 to the LazyMind repository after reviewing the test report.
 
+## Framework Overview
+
+```mermaid
+flowchart LR
+    manifest["Skill manifest<br/>name + link + optional env/case"] --> source["Source resolver<br/>SkillHub / GitHub / ZIP"]
+    source --> install["Stage 1: install<br/>download + static preflight"]
+    install --> installPassed["install_passed.yaml"]
+    installPassed --> smoke["Stage 2: smoke<br/>low-token LazyMind chat"]
+    smoke --> smokePassed["smoke_passed.yaml"]
+    smokePassed --> demo["Stage 3: demo<br/>full response + semantic judging"]
+
+    lazy["LazyMind service<br/>http://127.0.0.1:8090"] --> smoke
+    lazy --> demo
+    codex["Codex CLI<br/>case generation + semantic eval"] --> demo
+
+    demo --> reports["reports/<run-id>/"]
+    reports --> trials["skill_trials.jsonl<br/>source of truth"]
+    reports --> summary["summary.md<br/>human summary"]
+    reports --> bad["bad_cases.yaml + bugs.md<br/>failure reasons"]
+    reports --> candidates["onboarding_candidates.yaml<br/>manual onboarding input"]
+    candidates --> guide["docs/SKILL_ONBOARDING_GUIDE.md"]
+```
+
 ## What It Does
 
 - Downloads or resolves Skill sources from SkillHub, GitHub, or ZIP links.
