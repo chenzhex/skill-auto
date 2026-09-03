@@ -246,11 +246,10 @@ reports/scheduled-YYYYMMDD-HHMMSS/
 - 先启动 LazyMind Docker，再运行 `skill-auto`。
 - 跑测试前先打开 `http://127.0.0.1:8090`，确认网页端能正常登录和聊天。
 - 普通 `pipeline` 命令没有 `--username` / `--password` 参数；运行前需要先确认 LazyMind 服务和登录状态可用。
-- 定时任务会把 `--username`、`--password` 写入本机生成的脚本，别提交或分享 `schedules/`。
+- 定时任务会把 `--username`、`--password` 写入本机生成的脚本，建议只在可信本机环境使用。
 - 需要 API key 的 Skill，统一写入 YAML 的 `env` 字段，不再使用 `env.sh`。
-- 不要把真实 key 写进 README、代码、提交记录或公开 YAML；分享前改成 `your_xxx_here`。
+- 如果要把 YAML 发给别人，先把真实 key 改成 `your_xxx_here`。
 - 大批量测试建议使用 `pipeline`，不要直接对 100 个 Skill 全量 demo。
 - demo 阶段会消耗 Codex token，因为会生成 case 并做语义评测。
 - 遇到 LazyMind 模型限流时，框架会退避重试；重试仍失败会记录为 `model_rate_limited_passed`，不直接算 Skill 自身失败。
-- `reports/`、`logs/`、`schedules/`、`.DS_Store`、Python 缓存都是运行产物，不建议提交。
 - 正式接入 LazyMind 前，先看测试报告，再按 [`docs/SKILL_ONBOARDING_GUIDE.md`](SKILL_ONBOARDING_GUIDE.md) 操作。
