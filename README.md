@@ -16,16 +16,10 @@ to the LazyMind repository after reviewing the test report.
 ```mermaid
 flowchart LR
     A["YAML Manifest<br/>name / link / env / case"] --> B["Source Resolve<br/>SkillHub · GitHub · ZIP"]
-
-    subgraph P["Three-stage Pipeline"]
-        direction LR
-        C["1. Install<br/>download + preflight"]
-        D["2. Smoke<br/>low-token chat"]
-        E["3. Demo<br/>full run + semantic judge"]
-        C --> D --> E
-    end
-
-    B --> C
+    B --> T["Three-stage<br/>Pipeline"]
+    T --> C["1. Install<br/>download + preflight"]
+    C --> D["2. Smoke<br/>low-token chat"]
+    D --> E["3. Demo<br/>full run + semantic judge"]
     E --> F["Reports<br/>summary · trials · bad cases"]
     F --> G["Onboarding Candidates<br/>manual review + guide"]
 
@@ -34,11 +28,13 @@ flowchart LR
     X["Codex CLI"] -. case generation<br/>semantic eval .-> E
 
     classDef input fill:#eff6ff,stroke:#60a5fa,color:#0f172a;
+    classDef label fill:#fff7ed,stroke:#fdba74,color:#9a3412;
     classDef stage fill:#ffedd5,stroke:#f97316,color:#7c2d12,stroke-width:2px;
     classDef output fill:#ecfdf5,stroke:#34d399,color:#064e3b;
     classDef support fill:#f8fafc,stroke:#94a3b8,color:#334155,stroke-dasharray: 4 3;
 
     class A,B input;
+    class T label;
     class C,D,E stage;
     class F,G output;
     class L,X support;
