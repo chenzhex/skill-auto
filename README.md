@@ -13,23 +13,26 @@ to the LazyMind repository after reviewing the test report.
 
 ```mermaid
 flowchart LR
-    manifest["Skill manifest<br/>name + link + optional env/case"] --> source["Source resolver<br/>SkillHub / GitHub / ZIP"]
-    source --> install["Stage 1: install<br/>download + static preflight"]
-    install --> installPassed["install_passed.yaml"]
-    installPassed --> smoke["Stage 2: smoke<br/>low-token LazyMind chat"]
-    smoke --> smokePassed["smoke_passed.yaml"]
-    smokePassed --> demo["Stage 3: demo<br/>full response + semantic judging"]
+    A["YAML Manifest<br/>name / link / env / case"] --> B["Source Resolve<br/>SkillHub · GitHub · ZIP"]
+    B --> C["Install Check<br/>download + preflight"]
+    C --> D["Smoke Test<br/>low-token LazyMind chat"]
+    D --> E["Demo Test<br/>full run + semantic judge"]
+    E --> F["Reports<br/>summary · trials · bad cases"]
+    F --> G["Onboarding Candidates<br/>manual review + guide"]
 
-    lazy["LazyMind service<br/>http://127.0.0.1:8090"] --> smoke
-    lazy --> demo
-    codex["Codex CLI<br/>case generation + semantic eval"] --> demo
+    L["LazyMind :8090"] -. chat runtime .-> D
+    L -. chat runtime .-> E
+    X["Codex CLI"] -. case generation<br/>semantic eval .-> E
 
-    demo --> reports["reports/<run-id>/"]
-    reports --> trials["skill_trials.jsonl<br/>source of truth"]
-    reports --> summary["summary.md<br/>human summary"]
-    reports --> bad["bad_cases.yaml + bugs.md<br/>failure reasons"]
-    reports --> candidates["onboarding_candidates.yaml<br/>manual onboarding input"]
-    candidates --> guide["docs/SKILL_ONBOARDING_GUIDE.md"]
+    classDef input fill:#eef6ff,stroke:#3b82f6,color:#0f172a;
+    classDef stage fill:#f8fafc,stroke:#64748b,color:#0f172a;
+    classDef output fill:#f0fdf4,stroke:#22c55e,color:#0f172a;
+    classDef support fill:#fff7ed,stroke:#f97316,color:#0f172a;
+
+    class A,B input;
+    class C,D,E stage;
+    class F,G output;
+    class L,X support;
 ```
 
 ## What It Does
