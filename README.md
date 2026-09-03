@@ -16,9 +16,16 @@ to the LazyMind repository after reviewing the test report.
 ```mermaid
 flowchart LR
     A["YAML Manifest<br/>name / link / env / case"] --> B["Source Resolve<br/>SkillHub · GitHub · ZIP"]
-    B --> C["Install Check<br/>download + preflight"]
-    C --> D["Smoke Test<br/>low-token LazyMind chat"]
-    D --> E["Demo Test<br/>full run + semantic judge"]
+
+    subgraph P["Three-stage Pipeline"]
+        direction LR
+        C["1. Install<br/>download + preflight"]
+        D["2. Smoke<br/>low-token chat"]
+        E["3. Demo<br/>full run + semantic judge"]
+        C --> D --> E
+    end
+
+    B --> C
     E --> F["Reports<br/>summary · trials · bad cases"]
     F --> G["Onboarding Candidates<br/>manual review + guide"]
 
@@ -26,10 +33,10 @@ flowchart LR
     L -. chat runtime .-> E
     X["Codex CLI"] -. case generation<br/>semantic eval .-> E
 
-    classDef input fill:#eef6ff,stroke:#3b82f6,color:#0f172a;
-    classDef stage fill:#f8fafc,stroke:#64748b,color:#0f172a;
-    classDef output fill:#f0fdf4,stroke:#22c55e,color:#0f172a;
-    classDef support fill:#fff7ed,stroke:#f97316,color:#0f172a;
+    classDef input fill:#eff6ff,stroke:#60a5fa,color:#0f172a;
+    classDef stage fill:#ffedd5,stroke:#f97316,color:#7c2d12,stroke-width:2px;
+    classDef output fill:#ecfdf5,stroke:#34d399,color:#064e3b;
+    classDef support fill:#f8fafc,stroke:#94a3b8,color:#334155,stroke-dasharray: 4 3;
 
     class A,B input;
     class C,D,E stage;

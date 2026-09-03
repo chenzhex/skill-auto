@@ -11,9 +11,16 @@ Skill 接入采用“文档驱动”的方式：`skill-auto` 会产出候选清�
 ```mermaid
 flowchart LR
     A["YAML 清单<br/>name / link / env / case"] --> B["源码解析<br/>SkillHub · GitHub · ZIP"]
-    B --> C["安装检查<br/>下载 + 静态预检"]
-    C --> D["Smoke 测试<br/>低 token LazyMind 对话"]
-    D --> E["Demo 测试<br/>完整执行 + 语义评测"]
+
+    subgraph P["三阶段测试流水线"]
+        direction LR
+        C["1. Install<br/>下载 + 静态预检"]
+        D["2. Smoke<br/>低 token 对话"]
+        E["3. Demo<br/>完整执行 + 语义评测"]
+        C --> D --> E
+    end
+
+    B --> C
     E --> F["测试报告<br/>summary · trials · bad cases"]
     F --> G["接入候选<br/>人工复核 + 接入指南"]
 
@@ -21,10 +28,10 @@ flowchart LR
     L -. 对话运行 .-> E
     X["Codex CLI"] -. 用例生成<br/>语义评测 .-> E
 
-    classDef input fill:#eef6ff,stroke:#3b82f6,color:#0f172a;
-    classDef stage fill:#f8fafc,stroke:#64748b,color:#0f172a;
-    classDef output fill:#f0fdf4,stroke:#22c55e,color:#0f172a;
-    classDef support fill:#fff7ed,stroke:#f97316,color:#0f172a;
+    classDef input fill:#eff6ff,stroke:#60a5fa,color:#0f172a;
+    classDef stage fill:#ffedd5,stroke:#f97316,color:#7c2d12,stroke-width:2px;
+    classDef output fill:#ecfdf5,stroke:#34d399,color:#064e3b;
+    classDef support fill:#f8fafc,stroke:#94a3b8,color:#334155,stroke-dasharray: 4 3;
 
     class A,B input;
     class C,D,E stage;
@@ -415,4 +422,3 @@ python3 -m unittest discover -s tests -p 'test_*.py'
 - demo case 生成、校验、批量补救和回退
 - 语义评测归一化和应用
 - onboarding manifest resolve 和 writer
-
