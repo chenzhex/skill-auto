@@ -1,5 +1,7 @@
 # skill-auto
 
+[English](README.md) | [中文](README.zh-CN.md)
+
 `skill-auto` is a LazyMind Skill automation framework. It is used to batch test
 third-party Skills, record whether they can be installed and executed in
 LazyMind, classify failures, and produce reproducible trial reports.
