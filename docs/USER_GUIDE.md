@@ -200,11 +200,53 @@ semantic_eval_status       demo 阶段语义评测状态
 recommendation             onboard / hold / reject 等建议
 ```
 
-## 3. 注意事项
+## 3. 定时执行
+
+macOS 上可以用 `schedule` 命令创建一次性 `launchd` 定时任务。它会生成 runner 脚本和 plist，并在任务开始时用 `--username` / `--password` 登录 LazyMind 获取 token。
+
+```bash
+python3 -m skill_auto schedule \
+  --at "14:30" \
+  --manifest manifests/my-skills.yaml \
+  --base-url http://127.0.0.1:8090 \
+  --username admin \
+  --password admin \
+  --mode demo \
+  --attempts 2 \
+  --install-launchd
+```
+
+参数说明：
+
+- `--at`：执行时间，支持 `"14:30"` 或 `"2026-09-03 14:30"`；只写时分时，如果当天时间已过，会顺延到明天。
+- `--manifest`：要测试的 YAML 清单。
+- `--base-url`：LazyMind 网页/API 地址，默认通常是 `http://127.0.0.1:8090`。
+- `--username` / `--password`：LazyMind 登录账号密码，例如 `admin/admin`。
+- `--mode`：定时运行的测试阶段，可选 `install`、`smoke`、`demo`。
+- `--install-launchd`：真正注册到 macOS 定时任务；不加时只会生成脚本和 plist，不会执行注册。
+
+生成文件位置：
+
+```text
+schedules/
+  com.lazymind.skill-auto.<time>.sh
+  com.lazymind.skill-auto.<time>.plist
+  com.lazymind.skill-auto.<time>.out.log
+  com.lazymind.skill-auto.<time>.err.log
+```
+
+定时任务的测试结果默认写到：
+
+```text
+reports/scheduled-YYYYMMDD-HHMMSS/
+```
+
+## 4. 注意事项
 
 - 先启动 LazyMind Docker，再运行 `skill-auto`。
 - 跑测试前先打开 `http://127.0.0.1:8090`，确认网页端能正常登录和聊天。
-- 需要账号密码的定时任务命令会显式接收 `--username`、`--password`；这些信息会写入本机生成的调度脚本，别提交或分享。
+- 普通 `pipeline` 命令没有 `--username` / `--password` 参数；运行前需要先确认 LazyMind 服务和登录状态可用。
+- 定时任务会把 `--username`、`--password` 写入本机生成的脚本，别提交或分享 `schedules/`。
 - 需要 API key 的 Skill，统一写入 YAML 的 `env` 字段，不再使用 `env.sh`。
 - 不要把真实 key 写进 README、代码、提交记录或公开 YAML；分享前改成 `your_xxx_here`。
 - 大批量测试建议使用 `pipeline`，不要直接对 100 个 Skill 全量 demo。
@@ -212,4 +254,3 @@ recommendation             onboard / hold / reject 等建议
 - 遇到 LazyMind 模型限流时，框架会退避重试；重试仍失败会记录为 `model_rate_limited_passed`，不直接算 Skill 自身失败。
 - `reports/`、`logs/`、`schedules/`、`.DS_Store`、Python 缓存都是运行产物，不建议提交。
 - 正式接入 LazyMind 前，先看测试报告，再按 [`docs/SKILL_ONBOARDING_GUIDE.md`](SKILL_ONBOARDING_GUIDE.md) 操作。
-
